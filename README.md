@@ -127,3 +127,5 @@ Aplicación estadística para cálculo de frecuencias, gráficos y medidas de te
 
 ![captura 1 implementación](images/captura-no-agrupados-1.png)
 ![captura 2 implementación](images/captura-no-agrupados-2.png)
+
+~~1-2018/Sistemas Informaticos/Estadística Aplicada/Proyectos Software~~
