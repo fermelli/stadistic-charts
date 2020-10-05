@@ -1,0 +1,313 @@
+<link rel="stylesheet" href="./css/bootstrap.css">
+<link rel="stylesheet" href="./css/jquery-ui.min.css">
+<link rel="stylesheet" href="./css/estilo.css">
+
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="col-12 col-lg-10 offset-lg-1">
+        <!-- seccion nombre de la variable -->
+        <div id="sec-nomb-var" class="row seccion align-items-center">
+          <div class="col-12 col-xl-2 offset-xl-1">
+            <label for="nomb-var">Nombre de la Variable</label>
+            <button type="button" class="btn btn-outline-secondary btn-ayuda" data-toggle="popover"
+              data-placement="bottom" title="Nombre de la variable"
+              data-content="Es el nombre de la propiedad característica de la población en estudio."
+              onclick="ayuda(this)">?</button>
+          </div>
+          <div class="col-12 col-xl-8 margen">
+            <div class="row align-items-center alto-80">
+              <div class="col-12 col-xsm-12 col-sm-12 col-md-7">
+                <input type="text" id="nomb-var" class="input" autofocus placeholder="Nombre de la Variable">
+              </div>
+              <div class="col-6 col-xsm-4 col-sm-3 col-md-2">
+                <input type="button" id="aceptar1" class="boton btn btn-outline-success" value="Aceptar">
+              </div>
+              <div class="col-6 col-xsm-4 col-sm-3 col-md-2">
+                <input type="button" id="cancelar1" class="boton btn btn-outline-danger" disabled="true"
+                  value="Cancelar">
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- seccion cantidad de valores diferentes -->
+        <div id="sec-cant-val-obs" class="row seccion align-items-center desactivado">
+          <div class="col-12 col-xl-2 offset-xl-1">
+            <label for="cantidad">Cantidad de valores diferentes observados</label>
+            <button type="button" disabled class="btn btn-outline-secondary btn-ayuda" data-toggle="popover"
+              data-placement="bottom" title="Cantidad de valores diferentes observados."
+              data-content="Es la cantidad de valores diferentes que puede tomar la variable"
+              onclick="ayuda(this)">?</button>
+          </div>
+          <div class="col-12 col-xl-8 margen">
+            <div class="row align-items-center alto-80">
+              <div class="col-12 col-xsm-12 col-sm-12 col-md-7">
+                <input type="text" id="cantidad" class="input" disabled="true" placeholder="Cantidad">
+              </div>
+              <div class="col-6 col-xsm-4 col-sm-3 col-md-2">
+                <input type="button" id="aceptar2" class="boton btn btn-outline-success" disabled="true"
+                  value="Aceptar">
+              </div>
+              <div class="col-6 col-xsm-4 col-sm-3 col-md-2">
+                <input type="button" id="cancelar2" class="boton btn btn-outline-danger" disabled="true"
+                  value="Cancelar">
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- seccion valores diferentes observados -->
+        <div id="sec-val-dif-obs" class="row seccion seccion-auto align-items-center desactivado">
+          <div class="col-12 col-xl-2 offset-xl-1">
+            <label>Valores diferentes observados</label>
+            <button type="button" disabled class="btn btn-outline-secondary btn-ayuda" data-toggle="popover"
+              data-placement="bottom" title="Valores diferentes observados"
+              data-content="Son valores de la variable. Pueden ser cuantitativos (Son cantidades numéricas) o cualitativos (Expresan cualidades o características)."
+              onclick="ayuda(this)">?</button>
+          </div>
+
+          <div class="accordion col-12 col-xl-8" id="acordion">
+            <div class="card">
+              <div class="card-header">
+                <h5 class="mb-0">
+                  <button id="btn-colapsado-uno" class="btn btn-link btn-colapsado activo" type="button"
+                    data-toggle="collapse" data-target="#colapsado-uno" aria-expanded="true"
+                    aria-controls="colapsado-uno" disabled='true'>
+                    Valores observados numéricos
+                  </button>
+                </h5>
+              </div>
+              <div id="colapsado-uno" class="collapse show" aria-labelledby="headingOne" data-parent="#acordion">
+                <div class="card-body row">
+                  <div class="col-12 margen" id="valores-observados-numericos">
+                    <div id="valores-numericos" class="row justify-content-start">
+                      <div class="col-4 col-xsm-3 col-sm-2"><input type="button"
+                          class="btn-valor-num btn btn-outline-primary" disabled="true" value="0"></div>
+                      <div class="col-4 col-xsm-3 col-sm-2"><input type="button"
+                          class="btn-valor-num btn btn-outline-primary" disabled="true" value="1"></div>
+                      <div class="col-4 col-xsm-3 col-sm-2"><input type="button"
+                          class="btn-valor-num btn btn-outline-primary" disabled="true" value="2"></div>
+                      <div class="col-4 col-xsm-3 col-sm-2"><input type="button"
+                          class="btn-valor-num btn btn-outline-primary" disabled="true" value="3"></div>
+                      <div class="col-4 col-xsm-3 col-sm-2"><input type="button"
+                          class="btn-valor-num btn btn-outline-primary" disabled="true" value="4"></div>
+                      <div class="col-4 col-xsm-3 col-sm-2"><input type="button"
+                          class="btn-valor-num btn btn-outline-primary" disabled="true" value="5"></div>
+                      <div class="col-4 col-xsm-3 col-sm-2"><input type="button"
+                          class="btn-valor-num btn btn-outline-primary" disabled="true" value="6"></div>
+                      <div class="col-4 col-xsm-3 col-sm-2"><input type="button"
+                          class="btn-valor-num btn btn-outline-primary" disabled="true" value="7"></div>
+                      <div class="col-4 col-xsm-3 col-sm-2"><input type="button"
+                          class="btn-valor-num btn btn-outline-primary" disabled="true" value="8"></div>
+                      <div class="col-4 col-xsm-3 col-sm-2"><input type="button"
+                          class="btn-valor-num btn btn-outline-primary" disabled="true" value="9"></div>
+                      <div class="col-4 col-xsm-3 col-sm-2"><input type="button"
+                          class="btn-valor-num btn btn-outline-primary" disabled="true" value="10"></div>
+                    </div>
+                  </div>
+                  <div class="col-12 margen">
+                    <div class="row align-items-center alto-80">
+                      <div class="col-12 col-md-9">
+                        <input type="text" id="valor-obs-num" class="input" disabled="true"
+                          placeholder="Valor observado">
+                      </div>
+                      <div class="col-6 col-md-2">
+                        <input type="button" id="agregar-val-num" class="boton btn btn-outline-warning" disabled="true"
+                          value="Agregar">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-header">
+                <h5 class="mb-0">
+                  <button id="btn-colapsado-dos" class="btn btn-link collapsed btn-colapsado" type="button"
+                    data-toggle="collapse" data-target="#colapsado-dos" aria-expanded="false"
+                    aria-controls="colapsado-dos" disabled='true'>
+                    Valores observados literales
+                  </button>
+                </h5>
+              </div>
+              <div id="colapsado-dos" class="collapse" aria-labelledby="headingOne" data-parent="#acordion">
+                <div class="card-body">
+                  <div class="col-12 margen card-body" id="valores-observados-literales">
+                    <div id="valores-literales" class="row justify-content-start">
+                      <div class="div-literal col-6 col-md-4 col-xxl-3"><input type="button"
+                          class="btn-valor-lit btn btn-outline-primary" disabled="true" value="Femenino"></div>
+                      <div class="div-literal col-6 col-md-4 col-xxl-3"><input type="button"
+                          class="btn-valor-lit btn btn-outline-primary" disabled="true" value="Masculino"></div>
+                      <div class="div-literal col-6 col-md-4 col-xxl-3"><input type="button"
+                          class="btn-valor-lit btn btn-outline-primary" disabled="true" value="Deficiente"></div>
+                      <div class="div-literal col-6 col-md-4 col-xxl-3"><input type="button"
+                          class="btn-valor-lit btn btn-outline-primary" disabled="true" value="Medio"></div>
+                      <div class="div-literal col-6 col-md-4 col-xxl-3"><input type="button"
+                          class="btn-valor-lit btn btn-outline-primary" disabled="true" value="Satisfactorio"></div>
+                      <div class="div-literal col-6 col-md-4 col-xxl-3"><input type="button"
+                          class="btn-valor-lit btn btn-outline-primary" disabled="true" value="Muy bueno"></div>
+                      <div class="div-literal col-6 col-md-4 col-xxl-3"><input type="button"
+                          class="btn-valor-lit btn btn-outline-primary" disabled="true" value="Excelente"></div>
+                      <div class="div-literal col-6 col-md-4 col-xxl-3"><input type="button"
+                          class="btn-valor-lit btn btn-outline-primary" disabled="true" value="Muy en desacuerdo"></div>
+                      <div class="div-literal col-6 col-md-4 col-xxl-3"><input type="button"
+                          class="btn-valor-lit btn btn-outline-primary" disabled="true" value="En desacuerdo"></div>
+                      <div class="div-literal col-6 col-md-4 col-xxl-3"><input type="button"
+                          class="btn-valor-lit btn btn-outline-primary" disabled="true" value="Neutral"></div>
+                      <div class="div-literal col-6 col-md-4 col-xxl-3"><input type="button"
+                          class="btn-valor-lit btn btn-outline-primary" disabled="true" value="De acuerdo"></div>
+                      <div class="div-literal col-6 col-md-4 col-xxl-3"><input type="button"
+                          class="btn-valor-lit btn btn-outline-primary" disabled="true" value="Totalmente de acuerdo">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-12 margen">
+                    <div class="row align-items-center alto-80">
+                      <div class="col-12 col-md-9">
+                        <input type="text" id="valor-obs-lit" class="input" disabled="true"
+                          placeholder="Valor observado">
+                      </div>
+                      <div class="col-6 col-md-2">
+                        <input type="button" id="agregar-val-lit" class="boton btn btn-outline-warning " disabled="true"
+                          value="Agregar">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 col-xl-8 offset-xl-3 margen">
+            <div class="row align-items-center alto-80">
+              <div class="col-6 col-xsm-4 col-sm-3 col-md-2">
+                <input type="button" id="aceptar3" class="boton btn btn-outline-success" disabled="true"
+                  value="Aceptar">
+              </div>
+              <div class="col-6 col-xsm-4 col-sm-3 col-md-2">
+                <input type="button" id="cancelar3" class="boton btn btn-outline-danger" disabled="true"
+                  value="Cancelar">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="conteo" class="row seccion seccion-auto align-items-center desactivado">
+          <div class="col-12 col-xl-2 offset-xl-1">
+            <label>Conteo</label>
+            <button type="button" disabled class="btn btn-outline-secondary btn-ayuda" data-toggle="popover"
+              data-placement="bottom" title="Conteo"
+              data-content="Es el conteo de el número de veces que aparece un valor en el estudio."
+              onclick="ayuda(this)">?</button>
+          </div>
+          <div class="col-12 col-xl-8 margen">
+            <div id="div-conteo" class="row justify-content-start">
+              <!-- aqui van los contadores -->
+            </div>
+          </div>
+          <div class="col-12 col-xl-8 offset-xl-3 margen">
+            <div class="row align-items-center alto-80">
+              <div class="col-6 col-xsm-4 col-sm-3 col-md-2">
+                <input type="button" id="aceptar4" class="boton btn btn-outline-success" disabled="true"
+                  value="Aceptar">
+              </div>
+              <div class="col-6 col-xsm-4 col-sm-3 col-md-2">
+                <input type="button" id="cancelar4" class="boton btn btn-outline-danger" disabled="true"
+                  value="Cancelar">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="tabla-frec" class="row seccion seccion-auto align-items-center desactivado">
+          <div class="col-12 col-xl-3 offset-xl-1">
+            <label>Tabla de Frecuencias</label>
+            <button type="button" disabled class="btn btn-outline-secondary btn-ayuda" data-toggle="popover"
+              data-placement="bottom" title="Tabla de Frecuencias"
+              data-content="O Distribución de Frecuencias es una ordenación en forma de tabla de los datos estadísticos."
+              onclick="ayuda(this)">?</button>
+          </div>
+          <div class="col-12 col-xl-7" style="height: 20px;"></div>
+          <div class="col-12 col-xl-10 offset-xl-1">
+            <div id="div-tabla" class="row justify-content-start">
+              <!-- aqui van la tabla de frecuencias -->
+            </div>
+          </div>
+          <div class="col-12 col-xl-10 offset-xl-1 margen">
+            <div class="row align-items-center alto-80">
+              <div class="col-6 col-xsm-4 col-sm-3 col-md-2">
+                <input type="button" id="aceptar5" class="boton btn btn-outline-success" disabled="true"
+                  value="Aceptar">
+              </div>
+              <div class="col-6 col-xsm-4 col-sm-3 col-md-2">
+                <input type="button" id="cancelar5" class="boton btn btn-outline-danger" disabled="true"
+                  value="Cancelar">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="graficos" class="row seccion seccion-auto align-items-center desactivado">
+          <div class="col-12">
+            <label>Gráficos Estadísticos</label>
+            <button type="button" disabled class="btn btn-outline-secondary btn-ayuda" data-toggle="popover"
+              data-placement="bottom" title="Gráficos Estadísticos"
+              data-content="Es la representación de los datos, para que se manifieste visualmente la correlación estadística que guardan entre sí."
+              onclick="ayuda(this)">?</button>
+          </div>
+          <div class="col-12">
+            <div id="div-grafico1" class="row justify-content-center">
+              <!-- aqui va el grafico1 -->
+            </div>
+          </div>
+          <div class="col-12">
+            <div id="div-grafico2" class="row justify-content-center">
+              <!-- aqui va el grafico2 -->
+            </div>
+          </div>
+        </div>
+
+        <div id="medidas-tendencia-central" class="row seccion seccion-auto align-items-center desactivado">
+          <div class="col-12 col-xl-2 offset-xl-1">
+            <label>Medidas de Tendencia Central</label>
+            <button type="button" disabled class="btn btn-outline-secondary btn-ayuda" data-toggle="popover"
+              data-placement="bottom" title="Medidas de Tendencia Central"
+              data-content="Son aquellos valores de manera que alrededor del cual se concentran los valores de un conjunto de datos observados."
+              onclick="ayuda(this)">?</button>
+          </div>
+          <div class="col-12 col-xl-8">
+            <div id="div-medidas-tendencia-central" class="row justify-content-center">
+              <div class="col-12 col-sm-4">
+                <div class="card">
+                  <div class="card-body">
+                    <h6 class="card-title">Media Aritmética</h6>
+                    <p class="card-text" id="media"></p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-sm-4">
+                <div class="card">
+                  <div class="card-body">
+                    <h6 class="card-title">Mediana</h6>
+                    <p class="card-text" id="mediana"></p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-sm-4">
+                <div class="card">
+                  <div class="card-body">
+                    <h6 class="card-title">Moda</h6>
+                    <p class="card-text" id="moda"></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+<script src="./js/jquery-3.3.1.min.js"></script>
+<script src="./js/jquery-ui.min.js"></script>
+<script src="./js/jquery.ui.touch-punch.js"></script>
+<script src="./js/bootstrap.min.js"></script>
+<script src="./js/bootstrap.bundle.min.js"></script>
+<script src="./js/graficos.js"></script>
+<script src="./js/main.js"></script>

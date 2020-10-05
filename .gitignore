@@ -1,0 +1,11 @@
+/*.docx
+/*.pptx
+/*.xml
+/*.html
+!/index.html
+images/
+css/*.css
+!css/estilo.css
+js/*.js
+!js/graficos.js
+!js/main.js

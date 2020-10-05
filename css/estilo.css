@@ -1,0 +1,327 @@
+.seccion {
+  background: #FBFBFB;
+  margin-top: 25px;
+  box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+}
+
+.seccion-auto {
+  height: auto;
+}
+
+.margen {
+  border-radius: 15px;
+}
+
+.margen,
+.input {
+  border: 1px solid rgba(112, 112, 112, 0.5);
+}
+
+.alto-80 {
+  height: 80px;
+}
+
+.input {
+  width: 100%;
+  padding: 0px 10px;
+}
+
+/* quitar botonos input number */
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+/* - */
+
+.desactivado {
+  opacity: 0.5;
+  box-shadow: 0px 0px 0px;
+}
+
+.boton {
+  width: 90px;
+}
+
+.boton:not(:disabled) {
+  box-shadow: 0px 3px 5px rgba(59, 59, 59, 0.226);
+  font-weight: 500;
+}
+
+.btn-outline-success:focus {
+  box-shadow: 0 0 0 0.2rem rgba(40, 167, 69, 0.5);
+}
+
+.btn-outline-warning:focus {
+  box-shadow: 0 0 0 0.2rem rgba(255, 193, 7, 0.5);
+}
+
+.btn-outline-danger:focus {
+  box-shadow: 0 0 0 0.2rem rgba(220, 53, 69, 0.5);
+}
+
+
+.input:disabled,
+.btn:disabled,
+.contador:disabled,
+.valor-conteo:disabled,
+#total:disabled {
+  cursor: not-allowed;
+}
+
+.btn-valor-num {
+  width: 48px;
+  height: 48px;
+  border-radius: 5px;
+  margin: 0px 0px 6px 0px;
+  text-align: center;
+  padding: 0px;
+}
+
+.btn-valor-lit {
+  width: 100%;
+  height: 50px;
+  border-radius: 5px;
+  margin: 0px 0px 6px 0px;
+  text-align: center;
+  padding: 0px;
+  font-size: 75%;
+}
+
+@media (min-width: 200px) {
+  .btn-valor-num {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+@media (min-width: 378px) {
+  .btn-valor-num {
+    width: 50px;
+    height: 50px;
+  }
+}
+
+@media (min-width: 992px) {
+  .btn-valor-num {
+    width: 60px;
+    height: 60px;
+  }
+}
+
+.div-literal {
+  padding: 0px 7.5px !important;
+}
+
+.seleccionado {
+  background: #007bff;
+  color: #fff;
+}
+
+.seleccionado:disabled {
+  background: #007bff;
+  color: #fff;
+}
+
+#valores-observados-numericos {
+  padding-bottom: 15px;
+}
+
+#valores-numericos {
+  margin-top: 20px;
+}
+
+.col-2 {
+  padding: 0px;
+}
+
+.seccion-auto>.margen {
+  margin-top: 25px;
+}
+
+#div_conteo {
+  padding-bottom: 20px;
+}
+
+.seccion-auto>div:last-child {
+  margin-bottom: 25px;
+}
+
+.mensaje {
+  width: auto;
+  padding: 5px;
+  border-radius: 5px;
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+}
+
+.alerta {
+  background: #f8d7da;
+  color: #721c24;
+  border-color: #f5c6cb;
+}
+
+.aviso {
+  background: #fff3cd;
+  color: #856404;
+  border-color: #ffeeba;
+}
+
+.importante {
+  background: #e2e3e5;
+  color: #383d41;
+  border-color: #d6d8db;
+}
+
+.contenedor-contador {
+  padding: 8px 15px;
+}
+
+.espacio {
+  padding: 10px 0px;
+}
+
+.masmenos {
+  float: left;
+  width: 25px;
+  height: 50px;
+}
+
+.valor-contado,
+.valor-conteo,
+.contador,
+#total {
+  float: left;
+  width: 50px;
+  height: 50px;
+}
+
+@media (max-width: 300px) {
+  .btn-colapsado {
+    font-size: 13px;
+  }
+}
+
+.lit {
+  width: 50% !important;
+  font-size: 80%;
+}
+
+.valor-contado,
+.valor-conteo,
+#total {
+  cursor: default !important;
+}
+
+.valor-contado {
+  float: left;
+  background: #007bff;
+  color: #fff;
+  width: 50px;
+  height: 50px;
+  border-radius: 5px 0px 0px 5px;
+  margin: 0px;
+  text-align: center;
+}
+
+.valor-conteo,
+#total {
+  text-align: center;
+}
+
+.valor-conteo,
+.contador,
+#total {
+  border: 1px solid rgba(112, 112, 112, 0.5);
+}
+
+.valor-contado {
+  border: 1px solid #007bff;
+}
+
+.contador {
+  height: 25px;
+  background: #fff;
+  padding: 0px;
+}
+
+#total_conteo {
+  float: left;
+  width: 100px;
+}
+
+@media (max-width: 414px) {
+  #total_conteo {
+    width: 80px;
+  }
+}
+
+#total {
+  padding: 0px;
+  width: 46px;
+  border-radius: 0px 5px 5px 0px;
+}
+
+.mas {
+  border-bottom: none;
+  border-radius: 0px 5px 0px 0px;
+  color: green;
+}
+
+.menos {
+  border-radius: 0px 0px 5px 0px;
+  color: red;
+}
+
+.mas,
+.menos {
+  border-left: none;
+}
+
+thead>tr>th {
+  text-align: center;
+}
+
+thead>tr>th>span {
+  font-style: italic;
+}
+
+tbody>tr {
+  text-align: right;
+}
+
+.card-header {
+  padding: 12px 0px;
+}
+
+#colapsado-uno {
+  padding: 10px;
+}
+
+.card-body>div:last-child {
+  margin-top: 10px;
+}
+
+.btn-colapsado {
+  opacity: 0.5;
+}
+
+.canvas {
+  text-align: center;
+  padding: 15px;
+}
+
+button.activo {
+  opacity: 1;
+  font-weight: bold;
+}
+
+nav {
+  padding: 15px 0px 0px 0px;
+}
