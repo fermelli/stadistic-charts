@@ -6,7 +6,8 @@
 images/*
 !images/captura-anillo.png
 !images/captura-barras.png
-!images/captura-no-agrupados.png
+!images/captura-no-agrupados-1.png
+!images/captura-no-agrupados-2.png
 css/*.css
 !css/estilo.css
 js/*.js
