@@ -3,7 +3,10 @@
 /*.xml
 /*.html
 !/index.html
-images/
+images/*
+!images/captura-anillo.png
+!images/captura-barras.png
+!images/captura-no-agrupados.png
 css/*.css
 !css/estilo.css
 js/*.js
